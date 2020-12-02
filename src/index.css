@@ -111,7 +111,6 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  background-color: var(--global-color-background);
   width: 1200px;
   height: 100%;
 }
@@ -119,19 +118,129 @@ body {
 .interactive-map-container {
   position: relative;
   width: 100%;
+  z-index: 1;
 }
 
 .map-title {
   right: 0;
+  top: 40px;
   position: absolute;
   width: 500px;
   text-align: center;
+  line-height: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.languages-container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 5;
+}
+
+.languages-container .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70px;
+  height: 35px;
+  background-color: white;
+  font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.grey-overlay {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(161, 161, 161, 0.95);
+  z-index: 4;
+}
+
+.grey-overlay .language-selection-container {
+  background-color: white;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.grey-overlay .language-selection-container .btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.grey-overlay .language-selection-container .btn-container .btn {
+  border: 2px solid black;
+  padding: 0 10px;
+  margin: 0 10px;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.grey-overlay .language-selection-container .btn-container .btn:hover {
+  background-color: black;
+  color: white;
 }
 
 .map-images-container {
   position: relative;
   width: 100%;
   height: 900px;
+  z-index: 1;
 }
 
 .map-images-container .image {
@@ -143,7 +252,13 @@ body {
 }
 
 .map-images-container .map-image {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
   background-image: url("./images/map.png");
+  z-index: 2;
 }
 
 .map-images-container .river-image {
@@ -153,6 +268,7 @@ body {
   top: 50%;
   left: 50%;
   background-image: url("./images/map_river.gif");
+  z-index: 1;
 }
 
 .legend-container {
@@ -180,7 +296,8 @@ body {
   position: absolute;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
-  bottom: 0;
+  bottom: 50px;
+  z-index: 2;
 }
 
 .legend-container .legend-item {
@@ -201,9 +318,11 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-bottom: 10px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  height: 50px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .legend-container .legend-item .icon-container {
@@ -237,6 +356,7 @@ body {
 
 .legend-container .legend-item .name {
   margin-left: 10px;
+  line-height: 18px;
   width: 180px;
 }
 
@@ -261,6 +381,7 @@ body {
   left: 50%;
   width: 100%;
   height: 100%;
+  z-index: 2;
 }
 
 .active-icons-container .active-icon {
@@ -272,6 +393,37 @@ body {
   width: 50px;
   height: 50px;
   cursor: pointer;
+}
+
+.active-icons-container .active-icon .icon-title {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  top: -30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: nowrap;
+  display: none;
 }
 
 .active-icons-container .active-icon .icon-scale {
@@ -294,8 +446,8 @@ body {
   background-repeat: no-repeat;
   -webkit-animation: active-icon-animation;
           animation: active-icon-animation;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-fill-mode: forwards;
@@ -324,6 +476,12 @@ body {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+.active-icons-container .active-icon-stop .icon-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .active-icons-container .active-icon-stop .icon-scale {
