@@ -194,6 +194,7 @@ export class InteractiveMap extends Component {
                 src={this.state.virtualTourOpen ? "https://www.3dvista.com/samples/real_estate_virtual_tour.html" : ""}
                 title="virtual tour"
                 frameBorder="0"
+                allowFullScreen
               ></iframe>
             </div>
           </div>
