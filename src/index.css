@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@font-face {
+  font-family: "askanitalic";
+  src: url("./font/hoftype__askan_italic-webfont.woff2") format("woff2"), url("./font/hoftype__askan_italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -174,6 +181,7 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  font-family: "askanitalic";
 }
 
 .grey-overlay {
@@ -290,9 +298,6 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 300px;
   position: absolute;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
@@ -300,7 +305,38 @@ body {
   z-index: 2;
 }
 
-.legend-container .legend-item {
+.legend-container .legend-title {
+  font-size: 25px;
+  font-family: "askanitalic";
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.legend-container .icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 300px;
+}
+
+.legend-container .icons-container .legend-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,7 +361,7 @@ body {
           user-select: none;
 }
 
-.legend-container .legend-item .icon-container {
+.legend-container .icons-container .legend-item .icon-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -346,7 +382,7 @@ body {
   width: 120px;
 }
 
-.legend-container .legend-item .icon-container .icon {
+.legend-container .icons-container .legend-item .icon-container .icon {
   height: 100%;
   width: 40px;
   background-position: center;
@@ -354,22 +390,22 @@ body {
   background-repeat: no-repeat;
 }
 
-.legend-container .legend-item .name {
+.legend-container .icons-container .legend-item .name {
   margin-left: 10px;
   line-height: 18px;
   width: 180px;
 }
 
-.legend-container .legend-item:nth-child(2) .icon-container .icon,
-.legend-container .legend-item:nth-child(4) .icon-container .icon {
+.legend-container .icons-container .legend-item:nth-child(2) .icon-container .icon,
+.legend-container .icons-container .legend-item:nth-child(4) .icon-container .icon {
   width: 120px;
 }
 
-.legend-container .legend-item:nth-child(6) .icon-container,
-.legend-container .legend-item:nth-child(7) .icon-container,
-.legend-container .legend-item:nth-child(8) .icon-container,
-.legend-container .legend-item:nth-child(9) .icon-container,
-.legend-container .legend-item:nth-child(10) .icon-container {
+.legend-container .icons-container .legend-item:nth-child(6) .icon-container,
+.legend-container .icons-container .legend-item:nth-child(7) .icon-container,
+.legend-container .icons-container .legend-item:nth-child(8) .icon-container,
+.legend-container .icons-container .legend-item:nth-child(9) .icon-container,
+.legend-container .icons-container .legend-item:nth-child(10) .icon-container {
   width: 40px;
 }
 
@@ -446,8 +482,8 @@ body {
   background-repeat: no-repeat;
   -webkit-animation: active-icon-animation;
           animation: active-icon-animation;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-fill-mode: forwards;
@@ -461,6 +497,10 @@ body {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
+  60% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
   100% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
@@ -471,6 +511,10 @@ body {
   0% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+  }
+  60% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
@@ -489,7 +533,7 @@ body {
           transform: scale(1.5);
 }
 
-.active-icons-container .active-icon-stop .icon-scale .icon-rotation .icon {
+.active-icons-container .icons-stop .icon-scale .icon-rotation .icon {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }
@@ -505,8 +549,8 @@ body {
 }
 
 .active-icons-container .active-icon:nth-child(3) {
-  top: 31%;
-  left: 65%;
+  top: 26%;
+  left: 62%;
 }
 
 .active-icons-container .active-icon:nth-child(4) {
@@ -532,5 +576,134 @@ body {
 .active-icons-container .active-icon:nth-child(8) {
   top: 73%;
   left: 61.5%;
+}
+
+.warning-screen-container {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 300px;
+  width: 500px;
+  z-index: 3;
+}
+
+.warning-screen-container .warning-screen-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--global-color-background);
+  border: 2px solid grey;
+  font-size: 20px;
+}
+
+.warning-screen-container .warning-screen-content .warning-text {
+  margin-bottom: 20px;
+}
+
+.warning-screen-container .warning-screen-content .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 0;
+  top: 0;
+  padding: 10px 20px;
+  border: 1px solid black;
+  background-color: white;
+  z-index: 2;
+}
+
+.warning-screen-container .warning-screen-content .btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.warning-screen-container .warning-screen-content .btn-close {
+  position: absolute;
+}
+
+.modal-window-container {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  z-index: 3;
+  border: 2px solid black;
+}
+
+.modal-window-container .modal-window-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-window-container .modal-window-content .btn-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px 20px;
+  border: 1px solid black;
+  background-color: white;
+  z-index: 2;
+}
+
+.modal-window-container .modal-window-content .virtual-reality-frame-container {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  z-index: 1;
+}
+
+.modal-window-container .modal-window-content .virtual-reality-frame-container iframe {
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=index.css.map */

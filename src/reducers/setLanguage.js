@@ -1,11 +1,18 @@
 const initialState = {
-  language: "lithuanian"
+  language: "lithuanian",
+  languageIndex: 0
 };
 
 const setLanguage = (state = initialState, action) => {
   switch (action.type) {
     case "SET_LANGUAGE":
-      return { ...state, language: action.payload };
+      let languageIndex;
+      if (action.payload === "lithuanian") {
+        languageIndex = 0;
+      } else {
+        languageIndex = 1;
+      }
+      return { ...state, language: action.payload, languageIndex: languageIndex };
     default:
       return state;
   }
