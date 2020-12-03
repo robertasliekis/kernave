@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { connect } from "react-redux";
 
 import { setLanguage } from "../actions";
@@ -47,6 +48,7 @@ export class InteractiveMap extends Component {
     };
     this.activeIconsRefs = {};
     this.audioAboutRef = React.createRef();
+    this.iframeRef = React.createRef();
   }
 
   mouseEnterActiveIcon = (index) => {
@@ -58,13 +60,18 @@ export class InteractiveMap extends Component {
   };
 
   mouseClickActiveIcon = (index) => {
-    console.log(index);
     const initialState = this.state.virtualTourWarningOpen;
     this.setState({ virtualTourWarningOpen: !initialState, iconClickedIndex: index });
   };
 
   mouseClickEnterVR = () => {
     const initialState = this.state.virtualTourOpen;
+    console.log(initialState);
+    if (initialState) {
+      document.webkitExitFullscreen();
+    } else {
+      this.iframeRef.current.requestFullscreen();
+    }
     this.setState({ virtualTourOpen: !initialState });
   };
 
@@ -184,7 +191,12 @@ export class InteractiveMap extends Component {
             </div>
           </div>
         </div>
-        <div className="modal-window-container" style={{ display: this.state.virtualTourOpen ? "flex" : "none" }}>
+        <div
+          className="modal-window-container"
+          ref={this.iframeRef}
+          allowFullScreen
+          style={{ display: this.state.virtualTourOpen ? "flex" : "none" }}
+        >
           <div className="modal-window-content">
             <div className="btn btn-close" onClick={() => this.mouseClickEnterVR()}>
               {mapText.buttonClose[this.props.languageIndex]}
