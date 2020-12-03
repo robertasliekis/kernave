@@ -191,7 +191,7 @@ export class InteractiveMap extends Component {
             </div>
             <div className="virtual-reality-frame-container">
               <iframe
-                src={this.state.virtualTourOpen ? "http://88.119.159.183:8090/tours/utena_v4/" : ""}
+                src={this.state.virtualTourOpen ? "https://www.3dvista.com/samples/real_estate_virtual_tour.html" : ""}
                 title="virtual tour"
                 frameBorder="0"
               ></iframe>
