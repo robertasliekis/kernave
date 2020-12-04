@@ -33,7 +33,7 @@ const mapText = {
   legendTitle: ["Legenda", "Legend"],
   buttonClose: ["Uždaryti", "Close"],
   virtualTourWarning: ["Jūs įeinate į 360 virtualų turą", "You are entering 360 virtual tour"],
-  buttonConfirm: ["Gerai", "Okey"]
+  buttonConfirm: ["Įeiti", "Enter"]
 };
 
 export class InteractiveMap extends Component {
@@ -96,25 +96,19 @@ export class InteractiveMap extends Component {
   }
 
   render() {
+    const buttonLanguageLtClass = this.props.language === "lithuanian" ? "button-language-clicked" : "";
+    const buttonLanguageEnClass = this.props.language === "english" ? "button-language-clicked" : "";
     return (
       <div className="interactive-map-container">
         <div className="languages-container">
-          <div
-            className="btn btn-language-lt"
-            onClick={() => this.languageBtnClicked("lithuanian")}
-            style={{ border: this.props.language === "lithuanian" ? "3px solid black" : "none" }}
-          >
+          <div className={`btn btn-language-lt + ${buttonLanguageLtClass}`} onClick={() => this.languageBtnClicked("lithuanian")}>
             LT
           </div>
-          <div
-            className="btn btn-language-en"
-            onClick={() => this.languageBtnClicked("english")}
-            style={{ border: this.props.language === "english" ? "3px solid black" : "none" }}
-          >
+          <div className={`btn btn-language-en + ${buttonLanguageEnClass}`} onClick={() => this.languageBtnClicked("english")}>
             EN
           </div>
         </div>
-        <h1 className="map-title">{mapText.mapTitle[this.props.languageIndex]}</h1>
+        {/* <h1 className="map-title">{mapText.mapTitle[this.props.languageIndex]}</h1> */}
         <div className="map-images-container">
           <div className="river-image image"></div>
           <div className="map-image image"></div>

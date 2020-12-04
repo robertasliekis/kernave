@@ -30,7 +30,7 @@ ul li {
 }
 
 :root {
-  --global-color-background: #f9f2d3;
+  --global-color-background: rgb(248, 248, 248);
   --global-color-grey-light: rgb(165, 165, 165);
   --global-color-grey-dark: rgb(84, 91, 94);
   --global-padding-left-right: 15rem;
@@ -119,6 +119,7 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 1200px;
+  width: 100%;
   height: 100%;
 }
 
@@ -143,6 +144,8 @@ body {
 
 .languages-container {
   position: absolute;
+  -webkit-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,6 +160,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   z-index: 5;
+  left: 100%;
 }
 
 .languages-container .btn {
@@ -176,12 +180,21 @@ body {
   width: 70px;
   height: 35px;
   background-color: white;
+  border: 1px solid #dadada;
   font-size: 20px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   font-family: "askanitalic";
+}
+
+.languages-container .btn:nth-child(1) {
+  margin-right: 30px;
+}
+
+.languages-container .button-language-clicked {
+  background-color: #a1c485;
 }
 
 .grey-overlay {
@@ -275,7 +288,7 @@ body {
           transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  background-image: url("./images/map_river.gif");
+  background-image: url("./images/map_river2.gif");
   z-index: 1;
 }
 
@@ -301,7 +314,8 @@ body {
   position: absolute;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
-  bottom: 50px;
+  bottom: 80px;
+  left: 50px;
   z-index: 2;
 }
 
@@ -539,43 +553,43 @@ body {
 }
 
 .active-icons-container .active-icon:nth-child(1) {
-  top: 12%;
-  left: 16%;
+  top: 7%;
+  left: 13%;
 }
 
 .active-icons-container .active-icon:nth-child(2) {
-  top: 22%;
+  top: 19%;
   left: 51%;
 }
 
 .active-icons-container .active-icon:nth-child(3) {
-  top: 26%;
-  left: 62%;
+  top: 20%;
+  left: 63%;
 }
 
 .active-icons-container .active-icon:nth-child(4) {
-  top: 35%;
-  left: 61%;
+  top: 31%;
+  left: 62%;
 }
 
 .active-icons-container .active-icon:nth-child(5) {
-  top: 37%;
-  left: 50%;
+  top: 34%;
+  left: 49%;
 }
 
 .active-icons-container .active-icon:nth-child(6) {
-  top: 47%;
-  left: 70%;
+  top: 44%;
+  left: 72%;
 }
 
 .active-icons-container .active-icon:nth-child(7) {
-  top: 51%;
-  left: 54%;
+  top: 48%;
+  left: 55%;
 }
 
 .active-icons-container .active-icon:nth-child(8) {
-  top: 73%;
-  left: 61.5%;
+  top: 72%;
+  left: 62%;
 }
 
 .warning-screen-container {

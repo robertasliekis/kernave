@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <div className="overflow-wrapper">
-        <GreyOverlay />
+        {/* <GreyOverlay /> */}
         <div className="website-wrapper">
           <InteractiveMap />
         </div>
