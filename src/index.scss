@@ -66,8 +66,8 @@ body {
   font-family: "Spectral", serif;
   height: 100%;
   width: 100%;
-
-  background-color: var(--global-color-background);
+  background-color: transparent;
+  //  background-color: var(--global-color-background);
 }
 
 @mixin displayFlex {
