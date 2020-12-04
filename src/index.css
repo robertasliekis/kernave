@@ -99,7 +99,6 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  overflow: hidden;
 }
 
 .overflow-wrapper .website-wrapper {
@@ -742,6 +741,17 @@ body {
     height: 440px;
     width: 900px;
     width: 100%;
+  }
+  .map-images-container {
+    margin-top: 25px;
+  }
+  .map-images-container .active-icons-container {
+    top: calc(50% - 20px);
+  }
+  .legend-container {
+    position: relative;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 /*# sourceMappingURL=index.css.map */

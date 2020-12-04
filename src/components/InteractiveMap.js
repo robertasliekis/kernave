@@ -112,6 +112,41 @@ export class InteractiveMap extends Component {
         <div className="map-images-container">
           <div className="river-image image"></div>
           <div className="map-image image"></div>
+          <div className="active-icons-container">
+            {activeIcons.map((activeIcon, index) => {
+              return (
+                <div
+                  className="active-icon"
+                  key={index}
+                  ref={(ref) => {
+                    this.activeIconsRefs[index] = ref;
+                  }}
+                  onMouseEnter={() => this.mouseEnterActiveIcon(index)}
+                  onMouseLeave={() => this.mouseLeaveActiveIcon()}
+                  onClick={() => this.mouseClickActiveIcon(index)}
+                >
+                  <div className="icon-scale">
+                    <div
+                      className="icon-rotation"
+                      style={
+                        {
+                          //  transform: `rotate(${activeIcon[2]}deg)`
+                        }
+                      }
+                    >
+                      <div
+                        className="icon"
+                        style={{
+                          backgroundImage: `url("./images/icon-spinning.png")`
+                        }}
+                      ></div>
+                    </div>
+                  </div>
+                  <div className="icon-title">{activeIcon[this.props.languageIndex]}</div>
+                </div>
+              );
+            })}
+          </div>
         </div>
         <div className="legend-container">
           <div className="legend-title">{mapText.legendTitle[this.props.languageIndex]}</div>
@@ -133,41 +168,7 @@ export class InteractiveMap extends Component {
             })}
           </div>
         </div>
-        <div className="active-icons-container">
-          {activeIcons.map((activeIcon, index) => {
-            return (
-              <div
-                className="active-icon"
-                key={index}
-                ref={(ref) => {
-                  this.activeIconsRefs[index] = ref;
-                }}
-                onMouseEnter={() => this.mouseEnterActiveIcon(index)}
-                onMouseLeave={() => this.mouseLeaveActiveIcon()}
-                onClick={() => this.mouseClickActiveIcon(index)}
-              >
-                <div className="icon-scale">
-                  <div
-                    className="icon-rotation"
-                    style={
-                      {
-                        //  transform: `rotate(${activeIcon[2]}deg)`
-                      }
-                    }
-                  >
-                    <div
-                      className="icon"
-                      style={{
-                        backgroundImage: `url("./images/icon-spinning.png")`
-                      }}
-                    ></div>
-                  </div>
-                </div>
-                <div className="icon-title">{activeIcon[this.props.languageIndex]}</div>
-              </div>
-            );
-          })}
-        </div>
+
         <div className="warning-screen-container" style={{ display: this.state.virtualTourWarningOpen ? "flex" : "none" }}>
           <div className="warning-screen-content">
             <div className="btn btn-close" onClick={() => this.mouseClickActiveIcon()}>
