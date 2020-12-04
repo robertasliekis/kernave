@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "//robertasliekis.github.io/kernave/static/css/main.09ebd0c7.chunk.css",
-    "main.js": "//robertasliekis.github.io/kernave/static/js/main.6664b65c.chunk.js",
-    "main.js.map": "//robertasliekis.github.io/kernave/static/js/main.6664b65c.chunk.js.map",
+    "main.css": "//robertasliekis.github.io/kernave/static/css/main.f4578782.chunk.css",
+    "main.js": "//robertasliekis.github.io/kernave/static/js/main.d3e16adf.chunk.js",
+    "main.js.map": "//robertasliekis.github.io/kernave/static/js/main.d3e16adf.chunk.js.map",
     "runtime-main.js": "//robertasliekis.github.io/kernave/static/js/runtime-main.1420c16e.js",
     "runtime-main.js.map": "//robertasliekis.github.io/kernave/static/js/runtime-main.1420c16e.js.map",
     "static/js/2.80589fe1.chunk.js": "//robertasliekis.github.io/kernave/static/js/2.80589fe1.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.2cf4ddfc.chunk.js": "//robertasliekis.github.io/kernave/static/js/3.2cf4ddfc.chunk.js",
     "static/js/3.2cf4ddfc.chunk.js.map": "//robertasliekis.github.io/kernave/static/js/3.2cf4ddfc.chunk.js.map",
     "index.html": "//robertasliekis.github.io/kernave/index.html",
-    "static/css/main.09ebd0c7.chunk.css.map": "//robertasliekis.github.io/kernave/static/css/main.09ebd0c7.chunk.css.map",
+    "static/css/main.f4578782.chunk.css.map": "//robertasliekis.github.io/kernave/static/css/main.f4578782.chunk.css.map",
     "static/js/2.80589fe1.chunk.js.LICENSE.txt": "//robertasliekis.github.io/kernave/static/js/2.80589fe1.chunk.js.LICENSE.txt",
     "static/media/index.css": "//robertasliekis.github.io/kernave/static/media/map_river2.ace057b3.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.1420c16e.js",
     "static/js/2.80589fe1.chunk.js",
-    "static/css/main.09ebd0c7.chunk.css",
-    "static/js/main.6664b65c.chunk.js"
+    "static/css/main.f4578782.chunk.css",
+    "static/js/main.d3e16adf.chunk.js"
   ]
 }
