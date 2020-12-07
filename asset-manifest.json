@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "//robertasliekis.github.io/kernave/static/css/main.f4578782.chunk.css",
-    "main.js": "//robertasliekis.github.io/kernave/static/js/main.d3e16adf.chunk.js",
-    "main.js.map": "//robertasliekis.github.io/kernave/static/js/main.d3e16adf.chunk.js.map",
-    "runtime-main.js": "//robertasliekis.github.io/kernave/static/js/runtime-main.1420c16e.js",
-    "runtime-main.js.map": "//robertasliekis.github.io/kernave/static/js/runtime-main.1420c16e.js.map",
-    "static/js/2.80589fe1.chunk.js": "//robertasliekis.github.io/kernave/static/js/2.80589fe1.chunk.js",
-    "static/js/2.80589fe1.chunk.js.map": "//robertasliekis.github.io/kernave/static/js/2.80589fe1.chunk.js.map",
-    "static/js/3.2cf4ddfc.chunk.js": "//robertasliekis.github.io/kernave/static/js/3.2cf4ddfc.chunk.js",
-    "static/js/3.2cf4ddfc.chunk.js.map": "//robertasliekis.github.io/kernave/static/js/3.2cf4ddfc.chunk.js.map",
-    "index.html": "//robertasliekis.github.io/kernave/index.html",
-    "static/css/main.f4578782.chunk.css.map": "//robertasliekis.github.io/kernave/static/css/main.f4578782.chunk.css.map",
-    "static/js/2.80589fe1.chunk.js.LICENSE.txt": "//robertasliekis.github.io/kernave/static/js/2.80589fe1.chunk.js.LICENSE.txt",
-    "static/media/index.css": "//robertasliekis.github.io/kernave/static/media/map_river2.ace057b3.gif"
+    "main.css": "//www.zemelapis.kernave.org/static/css/main.3efdd517.chunk.css",
+    "main.js": "//www.zemelapis.kernave.org/static/js/main.feb380dd.chunk.js",
+    "main.js.map": "//www.zemelapis.kernave.org/static/js/main.feb380dd.chunk.js.map",
+    "runtime-main.js": "//www.zemelapis.kernave.org/static/js/runtime-main.021ca605.js",
+    "runtime-main.js.map": "//www.zemelapis.kernave.org/static/js/runtime-main.021ca605.js.map",
+    "static/js/2.80589fe1.chunk.js": "//www.zemelapis.kernave.org/static/js/2.80589fe1.chunk.js",
+    "static/js/2.80589fe1.chunk.js.map": "//www.zemelapis.kernave.org/static/js/2.80589fe1.chunk.js.map",
+    "static/js/3.2cf4ddfc.chunk.js": "//www.zemelapis.kernave.org/static/js/3.2cf4ddfc.chunk.js",
+    "static/js/3.2cf4ddfc.chunk.js.map": "//www.zemelapis.kernave.org/static/js/3.2cf4ddfc.chunk.js.map",
+    "index.html": "//www.zemelapis.kernave.org/index.html",
+    "static/css/main.3efdd517.chunk.css.map": "//www.zemelapis.kernave.org/static/css/main.3efdd517.chunk.css.map",
+    "static/js/2.80589fe1.chunk.js.LICENSE.txt": "//www.zemelapis.kernave.org/static/js/2.80589fe1.chunk.js.LICENSE.txt",
+    "static/media/index.css": "//www.zemelapis.kernave.org/static/media/map_river2.ace057b3.gif"
   },
   "entrypoints": [
-    "static/js/runtime-main.1420c16e.js",
+    "static/js/runtime-main.021ca605.js",
     "static/js/2.80589fe1.chunk.js",
-    "static/css/main.f4578782.chunk.css",
-    "static/js/main.d3e16adf.chunk.js"
+    "static/css/main.3efdd517.chunk.css",
+    "static/js/main.feb380dd.chunk.js"
   ]
 }
